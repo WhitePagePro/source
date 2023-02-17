@@ -11,7 +11,7 @@ import {
 } from '../../redux/features/counterSlice/counterSlice';
 import styles from './Counter.module.css';
 
-export function Counter() {
+const Counter = () => {
 	const count = useAppSelector(selectCount);
 	const dispatch = useAppDispatch();
 	const [incrementAmount, setIncrementAmount] = useState('2');
@@ -22,6 +22,7 @@ export function Counter() {
 		<div>
 			<div className={styles.row}>
 				<button
+					type="button"
 					className={styles.button}
 					aria-label="Decrement value"
 					onClick={() => dispatch(decrement())}
@@ -30,6 +31,7 @@ export function Counter() {
 				</button>
 				<span className={styles.value}>{count}</span>
 				<button
+					type="button"
 					className={styles.button}
 					aria-label="Increment value"
 					onClick={() => dispatch(increment())}
@@ -45,18 +47,21 @@ export function Counter() {
 					onChange={(e) => setIncrementAmount(e.target.value)}
 				/>
 				<button
+					type="button"
 					className={styles.button}
 					onClick={() => dispatch(incrementByAmount(incrementValue))}
 				>
 					Add Amount
 				</button>
 				<button
+					type="button"
 					className={styles.asyncButton}
 					onClick={() => dispatch(incrementAsync(incrementValue))}
 				>
 					Add Async
 				</button>
 				<button
+					type="button"
 					className={styles.button}
 					onClick={() => dispatch(incrementIfOdd(incrementValue))}
 				>
@@ -65,4 +70,6 @@ export function Counter() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default Counter;
