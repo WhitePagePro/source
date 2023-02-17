@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -21,3 +22,12 @@ export default (args: viteConfigInput) => {
 		},
 	});
 };
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})
+>>>>>>> 55e96458b4d3f0fecf689410fd3b98bf6369a078
