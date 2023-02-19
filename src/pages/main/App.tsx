@@ -1,7 +1,7 @@
 import React from 'react';
 import reactLogo from '../../assets/react.svg';
 import Counter from '../../components/counter/Counter';
-import './App.css';
+import './App.scss';
 
 const App = () => (
 	<div className="App">
