@@ -9,7 +9,7 @@ import {
 	incrementIfOdd,
 	selectCount,
 } from '../../redux/features/counterSlice/counterSlice';
-import styles from './Counter.module.css';
+import styles from './Counter.module.scss';
 
 const Counter = () => {
 	const count = useAppSelector(selectCount);
